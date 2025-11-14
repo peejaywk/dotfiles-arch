@@ -1,0 +1,34 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Environment Variables
+
+export EDITOR="vim"
+#export VISUAL = "vim"
+
+# Directories
+
+export REPOS="$HOME/Repos"
+export GITUSER="peejaywk"
+export GHREPOS="$REPOS/github.com/$GITUSER"
+export DOTFILES="$HOME/.local/share/chezmoi"
+export SCRIPTS="$DOTFILES/scripts"
+
+# Aliases
+
+if command -v lsd > /dev/null ; then
+  alias ls="lsd"
+  alias ll="ls -lgh"
+  alias la="ls -lathr"
+  alias lla="ls -lgha"
+  alias lt="ls --tree"
+fi
+
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+set -o vi
