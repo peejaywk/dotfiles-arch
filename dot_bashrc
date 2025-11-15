@@ -1,6 +1,8 @@
 #
 # ~/.bashrc
 #
+# Enable ble.sh
+[[ $- == *i* ]] && source -- /usr/share/blesh/ble.sh --attach=none
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -8,7 +10,7 @@
 # Environment Variables
 
 export EDITOR="vim"
-#export VISUAL = "vim"
+export HISTTIMEFORMAT="%F %T "
 
 # Directories
 
@@ -31,4 +33,8 @@ fi
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-set -o vi
+# Enable the Atuin shell history manager
+eval "$(atuin init bash)"
+
+[[ ! ${BLE_VERSION-} ]] || ble-attach
+
