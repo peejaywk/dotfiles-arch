@@ -35,6 +35,9 @@ export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$HOME/.local/share/chezmoi"
 export SCRIPTS="$DOTFILES/scripts"
 
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
+
 # -------- Aliases -------------
 
 if command -v lsd > /dev/null ; then
