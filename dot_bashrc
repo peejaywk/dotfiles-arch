@@ -45,7 +45,15 @@ if command -v lsd > /dev/null ; then
   alias lt="ls --tree"
 fi
 
+alias kb='vim ~/keybindings.md'
 alias grep='grep --color=auto'
+
+alias repos='cd $REPOS'
+
+alias gs='git status'
+alias gc='git commit'
+alias gp='git pull'
+
 PS1='[\u@\h \W]\$ '
 
 # Enable the Atuin shell history manager
