@@ -35,7 +35,7 @@ export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$HOME/.local/share/chezmoi"
 export SCRIPTS="$DOTFILES/scripts"
 
-# Aliases
+# -------- Aliases -------------
 
 if command -v lsd > /dev/null ; then
   alias ls="lsd"
@@ -50,9 +50,15 @@ alias grep='grep --color=auto'
 
 alias repos='cd $REPOS'
 
+# Git aliases
 alias gs='git status'
 alias gc='git commit'
+alias ga='git add .'
 alias gp='git pull'
+
+# kubectl aliases
+alias k='kubectl'
+alias kgp='kubectl get pods'
 
 PS1='[\u@\h \W]\$ '
 
@@ -61,3 +67,6 @@ eval "$(atuin init bash)"
 
 [[ ! ${BLE_VERSION-} ]] || ble-attach
 
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/home/peejaywk/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
