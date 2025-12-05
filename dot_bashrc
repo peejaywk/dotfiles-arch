@@ -34,6 +34,7 @@ export GITUSER="peejaywk"
 export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$HOME/.local/share/chezmoi"
 export SCRIPTS="$DOTFILES/scripts"
+export ZETTELKASTEN="$HOME/ObsidianVault/PeeJayRemoteVault"
 
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
@@ -52,12 +53,18 @@ alias kb='vim ~/keybindings.md'
 alias grep='grep --color=auto'
 
 alias repos='cd $REPOS'
+alias dot='cd $HOME/.local/share/chezmoi'
+alias homelab='cd $REPOS/lab'
+alias hl='homelab'
 
 # Git aliases
 alias gs='git status'
 alias gc='git commit'
 alias ga='git add .'
 alias gp='git pull'
+
+alias in="cd \$ZETTELKASTEN/0\ -\ Inbox/"
+alias cdzk="cd \$ZETTELKASTEN"
 
 # kubectl aliases
 alias k='kubectl'
