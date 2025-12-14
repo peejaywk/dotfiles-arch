@@ -61,7 +61,7 @@ alias hl='homelab'
 alias gs='git status'
 alias gc='git commit'
 alias ga='git add .'
-alias gp='git pull'
+alias gp='git push'
 
 alias in="cd \$ZETTELKASTEN/0\ -\ Inbox/"
 alias cdzk="cd \$ZETTELKASTEN"
